@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Georgia's #1 rated youth soccer coach in Alpharetta, Cumming, Johns Creek & Milton. Book today — 7 days a week." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.ico" />
+  <title>Topline Soccer | #1 Youth Soccer Coach in Alpharetta, Cumming & Johns Creek GA</title>
+
+  <script>
+    (function () {
+      var s = localStorage.getItem('tls-theme');
+      if (s === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+
+  <!-- Add this for using Tailwind Play CDN -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+
+  <!-- Use for Tailwind CLI -->
+  <link rel="stylesheet" href="src/output.css" />
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+
+</head>
+
+<body class="min-h-screen flex flex-col font-sans">
+
+  <!-- OVERLAY (Mobile Sidebar Backdrop) -->
+  <div id="overlay"
+    class="fixed inset-0 bg-black/55 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300">
+  </div>
+
+
+
+  <!-- SIDEBAR (Mobile Off-canvas) -->
+  <aside id="sidebar"
+    class="fixed top-0 right-0 w-[55vw] max-w-[320px] h-dvh z-50 translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-6 overflow-y-auto border-l backdrop-blur-xl"
+    style="background: var(--page-glass-bg); border-color: var(--page-glass-border);">
+    <div class="flex items-center justify-between mb-7">
+      <span class="font-bold text-lg" style="color: var(--page-text);">Topline <span
+          style="color: var(--blue-primary)">Soccer</span></span>
+      <button id="sbClose" aria-label="Close menu" class="text-gray-400 hover:text-white cursor-pointer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col">
+      <a href="#coach" class="py-3 text.base font-medium border-b transition-all hover:pl-1"
+        style="color: var(--page-text); border-color: var(--page-border);">About</a>
+      <a href="#classes" class="py-3 text.base font-medium border-b transition-all hover:pl-1"
+        style="color: var(--page-text); border-color: var(--page-border);">Programs</a>
+      <a href="#locations" class="py-3 text.base font-medium border-b transition-all hover:pl-1"
+        style="color: var(--page-text); border-color: var(--page-border);">Locations</a>
+      <a href="#faq" class="py-3 text.base font-medium border-b transition-all hover:pl-1"
+        style="color: var(--page-text); border-color: var(--page-border);">FAQ</a>
+    </nav>
+    <div class="mt-auto pt-8 flex flex-col gap-4">
+      <a href="tel:+14701234567" class="text-sm" style="color: var(--page-text-muted);">📞 (470) 123-4567</a>
+      <a href="#register"
+        class="w-full text-center py-2.5 px-6 rounded-full font-semibold text-sm text-white transition-all active:scale-95"
+        style="background: var(--blue-primary);">Register Now</a>
+    </div>
+  </aside>
+
+
+
+  <!-- HEADER / NAVBAR -->
+  <header class="w-full sticky top-0 z-30 text-sm">
+    <!-- Announcement Bar -->
+    <div class="text-center py-2 px-4 font-medium text-white" style="background: var(--blue-primary);">
+      ⚽ Summer Soccer Registration Now Open! Limited Spots — <a href="#register"
+        class="underline font-semibold text-white">Book Now</a> ⚽
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav class="h-17.5 flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 transition-colors border-b"
+      style="background: var(--page-nav-bg); border-color: var(--page-border);">
+      <a href="#hero" class="text-xl font-bold tracking-wide" style="color: var(--page-text);">Topline <span
+          style="color: var(--blue-primary)">Soccer</span></a>
+
+      <!-- Desktop Links -->
+      <ul class="hidden md:flex items-center space-x-8 list-none">
+        <li><a href="#coach" class="transition-colors hover:opacity-100 opacity-70"
+            style="color: var(--page-text);">About</a></li>
+        <li><a href="#classes" class="transition-colors hover:opacity-100 opacity-70"
+            style="color: var(--page-text);">Programs</a></li>
+        <li><a href="#locations" class="transition-colors hover:opacity-100 opacity-70"
+            style="color: var(--page-text);">Locations</a></li>
+        <li><a href="#faq" class="transition-colors hover:opacity-100 opacity-70"
+            style="color: var(--page-text);">FAQ</a></li>
+      </ul>
+
+      <!-- Desktop Right CTA & Controls -->
+      <div class="hidden md:flex items-center gap-5">
+        <button id="tdsk" aria-label="Toggle theme"
+          class="w-9 h-9 rounded-full border flex items-center justify-center cursor-pointer backdrop-blur-md transition-all hover:bg-blue-600 hover:text-white hover:border-blue-600"
+          style="background: var(--page-glass-bg); border-color: var(--page-glass-border); color: var(--page-text);">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <a href="tel:+14701234567" class="tracking-wide opacity-70 hover:opacity-100"
+          style="color: var(--page-text);">(470) 123-4567</a>
+        <a href="#register" class="text-white px-6 py-2 rounded-full font-semibold transition-all active:scale-95"
+          style="background: var(--blue-primary);">Register Now</a>
+      </div>
+
+      <!-- Mobile Right Controls -->
+      <div class="flex md:hidden items-center gap-3">
+        <button id="tmob" aria-label="Toggle theme"
+          class="w-9 h-9 rounded-full border flex items-center justify-center cursor-pointer backdrop-blur-md transition-all"
+          style="background: var(--page-glass-bg); border-color: var(--page-glass-border); color: var(--page-text);">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button id="sbOpen" aria-label="Open menu" class="p-1 cursor-pointer" style="color: var(--page-text);">
+          <svg width="26" height="26" viewBox="0 0 30 30" fill="currentColor">
+            <path
+              d="M3 7a1 1 0 0 0 0 2h24a1 1 0 0 0 0-2H3zm0 7a1 1 0 0 0 0 2h24a1 1 0 0 0 0-2H3zm0 7a1 1 0 0 0 0 2h24a1 1 0 0 0 0-2H3z" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <!-- Main tag for main land-mark of website  -->
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero"
+      class="hero-bg min-h-[92vh] flex items-center relative px-6 md:px-16 lg:px-24 xl:px-32 py-20 md:py-0">
+      <div class="max-w-152 flex flex-col gap-6">
+
+        <div
+          class="rainbow relative z-0 bg-white/15 overflow-hidden p-px flex items-center justify-center rounded-full transition duration-300 active:scale-100 mt-28 md:mt-32">
+          <button
+            class="flex items-center justify-center gap-3 pl-4 pr-6 py-3 border border-black rounded-full font-medium  backdrop-blur">
+            <div class="relative flex size-3.5 items-center justify-center">
+              <span
+                class="absolute inline-flex h-full w-full rounded-full bg-(--blue-primary) opacity-75 animate-ping duration-300"></span>
+              <span class="relative inline-flex size-2 rounded-full bg-(--blue-primary)"></span>
+            </div>
+            <span class='text-xs'>⚽ #1 Ranked CoachUp Coach in Georgia</span>
+          </button>
+        </div>
+
+        <!-- <div class="inline-flex items-center gap-2 w-fit px-4 py-1.5 rounded-full border text-[0.7rem] font-bold tracking-widest uppercase" style="background: rgba(0,86,148,0.18); color: #60A5FA; border-color: rgba(0,86,148,0.35);">
+        ⚽ #1 Ranked CoachUp Coach in Georgia
+      </div> -->
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight" style="color: var(--page-text);">
+          Train Smarter.<br /><span style="color: var(--blue-primary)">Play Better.</span><br />Win More.
+        </h1>
+
+        <p class="text-base leading-relaxed max-w-120" style="color: var(--page-text-muted);">
+          Private and group youth soccer coaching for ages 4–18 across Alpharetta, Cumming, Johns Creek & Milton — 7
+          days
+          a week, no contracts, real results.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#register"
+            class="inline-flex items-center justify-center px-7 py-2.5 rounded-full text-white font-semibold text-sm transition-all active:scale-95"
+            style="background: var(--blue-primary);">Book Your First Session →</a>
+          <a href="#classes"
+            class="inline-flex items-center justify-center px-7 py-2.5 rounded-full font-semibold text-sm border backdrop-blur-md transition-all active:scale-95"
+            style="background: var(--page-glass-bg); border-color: var(--page-glass-border); color: var(--page-text);">See
+            Programs</a>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-4 mt-4 pt-6 border-t" style="border-color: var(--page-border);">
+          <div class="flex -space-x-2">
+            <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
+              alt="Reviewer" />
+            <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face"
+              alt="Reviewer" />
+            <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
+              src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=80&h=80&fit=crop&crop=face"
+              alt="Reviewer" />
+            <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=80&h=80&fit=crop&crop=face"
+              alt="Reviewer" />
+            <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face"
+              alt="Reviewer" />
+          </div>
+          <div class="flex flex-col">
+            <span class="text-yellow-400 tracking-widest text-sm">★★★★★</span>
+            <p class="text-xs" style="color: var(--page-text-muted);"><strong style="color: var(--page-text);">500+
+                families</strong> trained across North Atlanta</p>
+          </div>
+          <div class="hidden sm:block w-px h-10" style="background: var(--page-border);"></div>
+          <div class="flex flex-col text-xs">
+            <p class="font-bold" style="color: var(--page-text);">Rated 5.0 on CoachUp</p>
+            <p style="color: var(--page-text-muted);">#1 Soccer Coach in Georgia</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop Floating Stats -->
+      <div
+        class="hidden lg:flex flex-col absolute right-16 top-1/2 -translate-y-1/2 gap-5 min-w-40 p-7 rounded-2xl border backdrop-blur-xl"
+        style="background: var(--page-glass-bg); border-color: var(--page-glass-border);">
+        <div>
+          <p class="text-3xl font-black leading-none" style="color: var(--blue-primary);">500+</p>
+          <p class="text-[0.7rem] mt-1" style="color: var(--page-text-muted);">Players Trained</p>
+        </div>
+        <div class="border-t" style="border-color: var(--page-border);"></div>
+        <div>
+          <p class="text-3xl font-black leading-none" style="color: var(--page-text);">10+</p>
+          <p class="text-[0.7rem] mt-1" style="color: var(--page-text-muted);">Years Coaching</p>
+        </div>
+        <div class="border-t" style="border-color: var(--page-border);"></div>
+        <div>
+          <p class="text-3xl font-black leading-none" style="color: var(--page-text);">7</p>
+          <p class="text-[0.7rem] mt-1" style="color: var(--page-text-muted);">Days a Week</p>
+        </div>
+        <div class="border-t" style="border-color: var(--page-border);"></div>
+        <div>
+          <p class="text-3xl font-black leading-none" style="color: var(--page-text);">4</p>
+          <p class="text-[0.7rem] mt-1" style="color: var(--page-text-muted);">Cities Covered</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- About Coach -->
+    <section id="coach" class="w-full py-24 px-6 md:px-16 lg:px-24 xl:px-32"
+      style="background-color: var(--page-bg-alt);">
+
+      <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- ── LEFT: TEXT CONTENT ───────────────────── -->
+        <div class="flex flex-col gap-6">
+
+          <!-- Section label -->
+          <span class="fade-up text-xs font-bold tracking-[0.18em] uppercase" style="color: var(--blue-primary);">
+            Meet Your Coach
+          </span>
+
+          <!-- H2 -->
+          <h2 class="fade-up delay-1 text-3xl sm:text-4xl font-black leading-tight" style="color: var(--page-text);">
+            Trained by the Best.<br />Here to Train Yours.
+          </h2>
+
+          <!-- Para 1 — bold the key phrase, trimmed -->
+          <p class="fade-up delay-2 text-base leading-relaxed" style="color: var(--page-text-muted);">
+            Coach Rami is a <strong style="color: var(--page-text);">UEFA-licensed soccer coach</strong>
+            and the <strong style="color: var(--page-text);">#1 rated youth trainer on CoachUp in Georgia</strong> —
+            with over a decade developing players from first-timers to competitive travel team hopefuls.
+          </p>
+
+          <!-- Para 2 — kept short on purpose (design advice: cut it in half) -->
+          <p class="fade-up delay-2 text-base leading-relaxed" style="color: var(--page-text-muted);">
+            Every session is built around <strong style="color: var(--page-text);">your child specifically</strong>.
+            No cookie-cutter drills. No wasted time. Just focused training parents
+            see translate directly onto the field.
+          </p>
+
+          <!-- Credentials list — scannable checklist, not a paragraph -->
+          <ul class="fade-up delay-3 flex flex-col gap-3 mt-2">
+
+            <li class="flex items-center gap-3">
+              <!-- Check icon -->
+              <span class="shrink-0 w-5 h-5 rounded-full flex items-center justify-center" style="background-color: color-mix(in srgb, var(--blue-primary) 18%, transparent);
+                   color: var(--blue-primary);">
+                <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="text-sm font-medium" style="color: var(--page-text);">
+                UEFA Licensed Coach
+              </span>
+            </li>
+
+            <li class="flex items-center gap-3">
+              <span class="shrink-0 w-5 h-5 rounded-full flex items-center justify-center" style="background-color: color-mix(in srgb, var(--blue-primary) 18%, transparent);
+                   color: var(--blue-primary);">
+                <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="text-sm font-medium" style="color: var(--page-text);">
+                #1 Rated CoachUp Soccer Coach in Georgia
+              </span>
+            </li>
+
+            <li class="flex items-center gap-3">
+              <span class="shrink-0 w-5 h-5 rounded-full flex items-center justify-center" style="background-color: color-mix(in srgb, var(--blue-primary) 18%, transparent);
+                   color: var(--blue-primary);">
+                <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="text-sm font-medium" style="color: var(--page-text);">
+                10+ Years Youth Development Experience
+              </span>
+            </li>
+
+            <li class="flex items-center gap-3">
+              <span class="shrink-0 w-5 h-5 rounded-full flex items-center justify-center" style="background-color: color-mix(in srgb, var(--blue-primary) 18%, transparent);
+                   color: var(--blue-primary);">
+                <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="text-sm font-medium" style="color: var(--page-text);">
+                Specialist in Ages 4–18
+              </span>
+            </li>
+
+            <li class="flex items-center gap-3">
+              <span class="shrink-0 w-5 h-5 rounded-full flex items-center justify-center" style="background-color: color-mix(in srgb, var(--blue-primary) 18%, transparent);
+                   color: var(--blue-primary);">
+                <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="text-sm font-medium" style="color: var(--page-text);">
+                Tryout Prep &amp; Competitive Player Development
+              </span>
+            </li>
+
+          </ul>
+
+          <!-- CTA -->
+          <div class="fade-up delay-4 mt-2">
+            <a href="#register" class="inline-flex items-center justify-center gap-2 px-7 py-2.5 rounded-full
+                 font-semibold text-sm text-white transition-all active:scale-95"
+              style="background-color: var(--blue-primary);"
+              onmouseover="this.style.backgroundColor='var(--blue-hover)'"
+              onmouseout="this.style.backgroundColor='var(--blue-primary)'">
+              Train with Coach Rami
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+
+            <div class="flex items-center gap-5 mt-2 ml-5" style="color: var(--blue-primary);">
+              <a aria-label="Visit our Facebook profile" href="#" class="hover:-translate-y-1 transition-transform"><svg
+                  width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></a>
+              <a aria-label="Visit our Instagram profile" href="#"
+                class="hover:-translate-y-1 transition-transform"><svg width="22" height="22" viewBox="0 0 24 24"
+                  fill="none">
+                  <path d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M16 11.37a4 4 0 1 1-7.914 1.173A4 4 0 0 1 16 11.37m1.5-4.87h.01" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></a>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ── RIGHT: COACH IMAGE ────────────────────── -->
+        <div class="fade-up delay-5 relative flex justify-center lg:justify-end">
+
+          <!-- Image wrapper with border accent -->
+          <div class="relative w-full max-w-sm lg:max-w-full">
+
+            <!-- Decorative blue border offset behind the image -->
+            <div class="absolute -bottom-3 -right-3 w-full h-full rounded-2xl"
+              style="background-color: var(--blue-primary); opacity: 0.25; z-index: 0;">
+            </div>
+
+            <!-- Coach photo -->
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80"
+              alt="Youth soccer coach training a player in Alpharetta Georgia"
+              class="relative z-10 w-full rounded-2xl object-cover" style="aspect-ratio: 4/5; max-height: 520px;"
+              loading="lazy" />
+
+            <!-- Floating badge — CoachUp #1 -->
+            <div class="absolute -bottom-5 -left-5 z-20 flex items-center gap-3
+                    px-4 py-3 rounded-xl shadow-xl border backdrop-blur-xl" style="background: var(--page-glass-bg);
+                    border-color: var(--page-glass-border);">
+              <div class="flex flex-col items-center justify-center w-10 h-10 rounded-full shrink-0"
+                style="background-color: var(--blue-primary);">
+                <span class="text-white font-black text-xs leading-none">#1</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs font-bold" style="color: var(--page-text);">
+                  CoachUp Georgia
+                </span>
+                <span class="text-[0.65rem]" style="color: var(--page-text-muted);">
+                  Top Rated Soccer Coach
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- SOCCER SERVICES -->
+    <section id="classes" class="w-full py-24 px-6 md:px-16 lg:px-24 xl:px-32"
+      style="background-color: var(--page-bg-alt);">
+
+      <div class="max-w-6xl mx-auto flex flex-col gap-14">
+
+        <!-- ── Section Header ─────────────────────────────── -->
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <span class="fade-up text-xs font-bold tracking-[0.18em] uppercase" style="color: var(--blue-primary);">
+            What We Offer
+          </span>
+
+          <h2 class="fade-up delay-1 text-3xl sm:text-4xl font-black leading-tight" style="color: var(--page-text);">
+            Training Programs Built for Every Level
+          </h2>
+
+          <p class="fade-up delay-2 text-base leading-relaxed" style="color: var(--page-text-muted);">
+            Topline Soccer offers a full range of youth soccer training programs
+            in Alpharetta, GA and surrounding cities. From beginner fundamentals
+            to advanced competitive prep, every program is designed by a certified
+            Georgia soccer coach to deliver measurable improvement in technique,
+            speed, positioning, and game intelligence.
+          </p>
+        </div>
+
+        <!-- ── Service Cards Grid ──────────────────────────── -->
+        <!-- 3-col on lg, 2-col on md, 1-col on mobile -->
+        <div class="fade-up delay-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <!-- CARD 1: 1-on-1 Private Training -->
+          <article class="service-card" aria-label="1-on-1 Private Training program">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+            </div>
+
+            <h3 class="service-title" style="color: var(--page-text);">
+              1-on-1 Private Training
+            </h3>
+
+            <p class="service-description" style="color: var(--page-text-muted);">
+              The most effective way to improve fast. Private sessions with Coach Rami
+              are fully personalized — targeting your child's specific weaknesses and
+              building on their strengths with a clear, progressive plan each week.
+            </p>
+
+            <div class="service-meta">
+              <span class="service-tag" style="background-color: color-mix(in srgb, var(--blue-primary) 12%, transparent);
+                 color: var(--blue-primary);">
+                All ages &amp; levels
+              </span>
+              <span class="service-tag" style="background-color: color-mix(in srgb, var(--blue-primary) 12%, transparent);
+                 color: var(--blue-primary);">
+                60 min
+              </span>
+            </div>
+
+            <a href="#register" class="service-cta" style="color: var(--blue-primary);">
+              Book a Private Session
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- CARD 2: Group Training (2–6 Players) -->
+          <article class="service-card" aria-label="Group Training program for 2 to 6 players">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+
+            <h3 class="service-title" style="color: var(--page-text);">
+              Group Training (2–6 Players)
+            </h3>
+
+            <p class="service-description" style="color: var(--page-text-muted);">
+              Small group sessions that combine competitive energy with personalized
+              attention. Players train together, push each other, and develop teamwork
+              and communication skills alongside technical fundamentals.
+            </p>
+
+            <div class="service-meta">
+              <span class="service-tag" style="background-color: color-mix(in srgb, var(--blue-primary) 12%, transparent);
+                 color: var(--blue-primary);">
+                Ages 6–16
+              </span>
+              <span class="service-tag" style="background-color: color-mix(in srgb, var(--blue-primary) 12%, transparent);
+                 color: var(--blue-primary);">
+                75 min
+              </span>
+            </div>
+
+            <a href="#register" class="service-cta" style="color: var(--blue-primary);">
+              Join a Group Session
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- CARD 3: Full Player Evaluation -->
+          <article class="service-card" aria-label="Full Player Evaluation program">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+            </div>
+
+            <h3 class="service-title" style="color: var(--page-text);">
+              Full Player Evaluation
+            </h3>
+
+            <p class="service-description" style="color: var(--page-text-muted);">
+              A comprehensive 90-minute assessment of your child's technical skills,
+              physical conditioning, positional understanding, and mental approach.
+              Includes a detailed written report and a personalized development roadmap.
+            </p>
+
+            <div class="service-meta">
+              <span class="service-tag" style="background-color: color-mix(in srgb, var(--blue-primary) 12%, transparent);
+                 color: var(--blue-primary);">
+                First-time clients
+              </span>
+              <span class="service-tag" style="background-color: color-mix(in srgb, var(--blue-primary) 12%, transparent);
+                 color: var(--blue-primary);">
+                90 min
+              </span>
+            </div>
+
+            <a href="#register" class="service-cta" style="color: var(--blue-primary);">
+              Book an Evaluation
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- CARD 4: Tryout Preparation Program -->
+          <article class="service-card" aria-label="Tryout Preparation Program">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <polyline points="9 12 11 14 15 10" />
+              </svg>
+            </div>
+
+            <h3 class="service-title" style="color: var(--page-text);">
+              Tryout Preparation Program
+            </h3>
+
+            <p class="service-description" style="color: var(--page-text-muted);">
+              Designed specifically for players preparing for school team, travel club,
+              or academy tryouts. Intensive sessions focused on the skills evaluators
+              look for — first touch, 1v1 confidence, shooting accuracy, and positioning.
+            </p>
+
+            <div class="service-meta">
+              <span class="service-tag" style="background-color: color-mix(in srgb, var(--blue-primary) 12%, transparent);
+                 color: var(--blue-primary);">
+                Ages 10–18
+              </span>
+              <span class="service-tag" style="background-color: color-mix(in srgb, var(--blue-primary) 12%, transparent);
+                 color: var(--blue-primary);">
+                60–75 min
+              </span>
+            </div>
+
+            <a href="#register" class="service-cta" style="color: var(--blue-primary);">
+              Start Tryout Prep
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- CARD 5: Soccer Fundamentals (Beginners) -->
+          <article class="service-card" aria-label="Soccer Fundamentals program for beginners">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+            </div>
+
+            <h3 class="service-title" style="color: var(--page-text);">
+              Soccer Fundamentals (Beginners)
+            </h3>
+
+            <p class="service-description" style="color: var(--page-text-muted);">
+              A fun, encouraging introduction to soccer for young players aged 4–8.
+              Coach Rami builds foundational skills — ball control, passing, movement,
+              and game rules — in a supportive environment that makes kids excited to
+              keep coming back.
+            </p>
+
+            <div class="service-meta">
+              <span class="service-tag" style="background-color: color-mix(in srgb, var(--blue-primary) 12%, transparent);
+                 color: var(--blue-primary);">
+                Ages 4–8
+              </span>
+              <span class="service-tag" style="background-color: color-mix(in srgb, var(--blue-primary) 12%, transparent);
+                 color: var(--blue-primary);">
+                45 min
+              </span>
+            </div>
+
+            <a href="#register" class="service-cta" style="color: var(--blue-primary);">
+              Enroll Your Child
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- CARD 6: Speed, Agility & Conditioning -->
+          <article class="service-card" aria-label="Speed, Agility and Conditioning program">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+
+            <h3 class="service-title" style="color: var(--page-text);">
+              Speed, Agility &amp; Conditioning
+            </h3>
+
+            <p class="service-description" style="color: var(--page-text-muted);">
+              Off-ball training that directly improves on-field performance. This program
+              develops explosive speed, agility footwork, stamina, and body coordination
+              — the physical edge that separates good players from great ones.
+            </p>
+
+            <div class="service-meta">
+              <span class="service-tag" style="background-color: color-mix(in srgb, var(--blue-primary) 12%, transparent);
+                 color: var(--blue-primary);">
+                Ages 10–18
+              </span>
+              <span class="service-tag" style="background-color: color-mix(in srgb, var(--blue-primary) 12%, transparent);
+                 color: var(--blue-primary);">
+                60 min
+              </span>
+            </div>
+
+            <a href="#register" class="service-cta" style="color: var(--blue-primary);">
+              Get Faster, Get Stronger
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+        </div>
+
+        <!-- ── Bottom CTA Bar ───────────────────────────────── -->
+        <div class="fade-up delay-3 flex flex-col sm:flex-row items-start sm:items-center
+            justify-between gap-4 p-6 rounded-2xl border" style="background-color: var(--page-card-bg);
+            border-color: var(--page-border);">
+
+          <div class="flex flex-col gap-0.5">
+            <p class="font-bold text-sm" style="color: var(--page-text);">
+              Not sure which program is right?
+            </p>
+            <p class="text-sm" style="color: var(--page-text-muted);">
+              Coach Rami will personally match your child to the perfect program.
+            </p>
+          </div>
+
+          <a href="#register" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full
+            font-semibold text-sm text-white shrink-0
+            active:scale-95 transition-all duration-200" style="background-color: var(--blue-primary);"
+            aria-label="Get matched to the right soccer training program"
+            onmouseover="this.style.backgroundColor='var(--blue-hover)'"
+            onmouseout="this.style.backgroundColor='var(--blue-primary)'">
+            Get Matched Today
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- Procedure -->
+    <section id="how-it-works" class="w-full py-24 px-6 md:px-16 lg:px-24 xl:px-32"
+      style="background-color: var(--page-bg-alt);">
+
+      <div class="max-w-6xl mx-auto flex flex-col gap-16">
+
+        <!-- ── Header ──────────────────────────────── -->
+        <div class="flex flex-col gap-4 max-w-xl">
+
+          <span class="reveal opacity-0 translate-y-6 transition-all duration-700
+               text-xs font-bold tracking-[0.18em] uppercase" style="color: var(--blue-primary);">
+            Simple Process
+          </span>
+
+          <!-- H2: short, punchy — advice says cut it in half -->
+          <h2 class="reveal opacity-0 translate-y-6 transition-all duration-700
+               text-3xl sm:text-4xl font-black leading-tight" style="color: var(--page-text); transition-delay: 0.1s;">
+            Getting Started Takes<br class="hidden sm:block" />
+            Less Than 5 Minutes
+          </h2>
+
+          <!-- Intro: 1 sentence only. Cut everything else. -->
+          <p class="reveal opacity-0 translate-y-6 transition-all duration-700
+               text-base leading-relaxed" style="color: var(--page-text-muted); transition-delay: 0.15s;">
+            No contracts. No complicated enrollment. Just three steps.
+          </p>
+
+        </div>
+
+        <!-- ── 3 Steps — PrebuiltUI Workflow pattern ─ -->
+        <!--
+      Desktop: [Step 1] ──→── [Step 2] ──→── [Step 3]
+      Mobile: stacked vertically with dashed connector
+    -->
+        <div class="flex flex-col md:flex-row items-stretch gap-0">
+
+          <!-- STEP 1 ─────────────────────────────── -->
+          <article class="reveal opacity-0 translate-y-6 transition-all duration-700
+               flex-1 flex flex-col gap-5 p-6 rounded-2xl border
+               hover:-translate-y-1 hover:shadow-xl cursor-default" style="background-color: var(--page-card-bg);
+               border-color: var(--page-border);
+               transition-delay: 0.1s;" aria-label="Step 1: Fill out the registration form">
+
+            <!-- Step number badge -->
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center
+                   font-black text-sm text-white shrink-0" style="background-color: var(--blue-primary);"
+                aria-hidden="true">
+                01
+              </div>
+              <!-- Dashed connector line (desktop only, inside step row) -->
+              <div class="hidden" aria-hidden="true"></div>
+            </div>
+
+            <!-- Step icon -->
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background-color: color-mix(in srgb, var(--blue-primary) 14%, transparent);
+                 color: var(--blue-primary);" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14,2 14,8 20,8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10,9 9,9 8,9" />
+              </svg>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <h3 class="text-lg font-bold" style="color: var(--page-text);">
+                Fill Out the Form
+              </h3>
+              <!-- 2 sentences max — advice: cut it in half -->
+              <p class="text-sm leading-relaxed" style="color: var(--page-text-muted);">
+                Tell us your child's age, skill level, and preferred city.
+                Takes about 2 minutes.
+              </p>
+            </div>
+
+            <a href="#register" class="inline-flex items-center gap-1.5 text-xs font-semibold
+                  mt-auto transition-all duration-200 hover:gap-2.5" style="color: var(--blue-primary);"
+              aria-label="Go to registration form to get started with Step 1">
+              Start Here
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+
+          </article>
+
+          <!-- Connector: desktop horizontal, mobile vertical -->
+          <div class="flex md:items-center justify-center
+                  py-3 md:py-0 md:px-3" aria-hidden="true">
+            <!-- Vertical (mobile) -->
+            <div class="block md:hidden w-px h-8 border-l-2 border-dashed" style="border-color: var(--page-border);">
+            </div>
+            <!-- Horizontal (desktop) -->
+            <div class="hidden md:flex items-center gap-1" style="color: var(--page-text-muted);">
+              <div class="w-8 h-px border-t-2 border-dashed" style="border-color: var(--page-border);"></div>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- STEP 2 ─────────────────────────────── -->
+          <article class="reveal opacity-0 translate-y-6 transition-all duration-700
+               flex-1 flex flex-col gap-5 p-6 rounded-2xl border
+               hover:-translate-y-1 hover:shadow-xl cursor-default" style="background-color: var(--page-card-bg);
+               border-color: var(--page-border);
+               transition-delay: 0.2s;" aria-label="Step 2: We match you to the right program">
+
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center
+                   font-black text-sm text-white shrink-0" style="background-color: var(--blue-primary);"
+                aria-hidden="true">
+                02
+              </div>
+            </div>
+
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background-color: color-mix(in srgb, var(--blue-primary) 14%, transparent);
+                 color: var(--blue-primary);" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <h3 class="text-lg font-bold" style="color: var(--page-text);">
+                We Match Your Program
+              </h3>
+              <p class="text-sm leading-relaxed" style="color: var(--page-text-muted);">
+                Coach Rami personally reviews every registration and
+                recommends the right program for your child's goals.
+              </p>
+            </div>
+
+            <!-- No CTA here — only Step 1 and Step 3 have actions (advice: one clear action) -->
+            <p class="text-xs mt-auto" style="color: var(--page-text-muted);">
+              Response within 24 hours
+            </p>
+
+          </article>
+
+          <!-- Connector -->
+          <div class="flex md:items-center justify-center
+                  py-3 md:py-0 md:px-3" aria-hidden="true">
+            <div class="block md:hidden w-px h-8 border-l-2 border-dashed" style="border-color: var(--page-border);">
+            </div>
+            <div class="hidden md:flex items-center gap-1" style="color: var(--page-text-muted);">
+              <div class="w-8 h-px border-t-2 border-dashed" style="border-color: var(--page-border);"></div>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- STEP 3 ─────────────────────────────── -->
+          <article class="reveal opacity-0 translate-y-6 transition-all duration-700
+               flex-1 flex flex-col gap-5 p-6 rounded-2xl border
+               hover:-translate-y-1 hover:shadow-xl cursor-default" style="background-color: var(--page-card-bg);
+               border-color: var(--page-border);
+               transition-delay: 0.3s;" aria-label="Step 3: Show up and start improving">
+
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center
+                   font-black text-sm text-white shrink-0" style="background-color: var(--blue-primary);"
+                aria-hidden="true">
+                03
+              </div>
+            </div>
+
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background-color: color-mix(in srgb, var(--blue-primary) 14%, transparent);
+                 color: var(--blue-primary);" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12,6 12,12 16,14" />
+              </svg>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <h3 class="text-lg font-bold" style="color: var(--page-text);">
+                Show Up &amp; Improve
+              </h3>
+              <p class="text-sm leading-relaxed" style="color: var(--page-text-muted);">
+                Come to your local field. No equipment needed —
+                just cleats, a ball if you have one, and a desire to improve.
+              </p>
+            </div>
+
+            <a href="#locations" class="inline-flex items-center gap-1.5 text-xs font-semibold
+                  mt-auto transition-all duration-200 hover:gap-2.5" style="color: var(--blue-primary);"
+              aria-label="View training locations near you for Step 3">
+              View Locations
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+
+          </article>
+
+        </div>
+
+        <!-- ── Closing bar ──────────────────────────────── -->
+        <div class="reveal opacity-0 translate-y-6 transition-all duration-700
+             flex flex-col sm:flex-row items-start sm:items-center
+             justify-between gap-4 p-6 rounded-2xl border" style="background-color: var(--page-card-bg);
+             border-color: var(--page-border);
+             transition-delay: 0.2s;">
+
+          <div class="flex flex-col gap-0.5">
+            <p class="font-bold text-sm" style="color: var(--page-text);">
+              Questions before you register?
+            </p>
+            <p class="text-sm" style="color: var(--page-text-muted);">
+              Call or text Coach Rami — available 7 days a week.
+            </p>
+          </div>
+
+          <a href="tel:+14701234567" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full
+                font-semibold text-sm text-white shrink-0
+                active:scale-95 transition-all duration-200" style="background-color: var(--blue-primary);"
+            aria-label="Call or text Coach Rami at (470) 123-4567 with questions before registering"
+            onmouseover="this.style.backgroundColor='var(--blue-hover)'"
+            onmouseout="this.style.backgroundColor='var(--blue-primary)'">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                   19.79 19.79 0 0 1-8.63-3.07
+                   19.5 19.5 0 0 1-6-6
+                   19.79 19.79 0 0 1-3.07-8.67
+                   A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72
+                   12.84 12.84 0 0 0 .7 2.81
+                   2 2 0 0 1-.45 2.11L8.09 9.91
+                   a16 16 0 0 0 6 6l1.27-1.27
+                   a2 2 0 0 1 2.11-.45
+                   12.84 12.84 0 0 0 2.81.7
+                   A2 2 0 0 1 22 16.92z" />
+            </svg>
+            (470) 123-4567
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="w-full py-24 px-6 md:px-16 lg:px-24 xl:px-32 overflow-hidden"
+      style="background-color: var(--page-bg);">
+
+      <div class="max-w-6xl mx-auto flex flex-col gap-14">
+
+        <!-- ── Header ─────────────────────────────── -->
+        <div class="flex flex-col sm:flex-row sm:items-end
+                justify-between gap-6">
+
+          <div class="flex flex-col gap-3">
+            <span class="reveal opacity-0 translate-y-6 transition-all duration-700
+                     text-xs font-bold tracking-[0.18em] uppercase" style="color: var(--blue-primary);">
+              What Parents &amp; Players Say
+            </span>
+
+            <h2 class="reveal opacity-0 translate-y-6 transition-all duration-700
+                   text-3xl sm:text-4xl font-black leading-tight"
+              style="color: var(--page-text); transition-delay: 0.1s;">
+              Real Families.<br class="hidden sm:block" /> Real Results.
+            </h2>
+          </div>
+
+          <!-- Overall rating badge -->
+          <div class="reveal opacity-0 translate-y-6 transition-all duration-700
+                  flex flex-col items-start sm:items-end gap-1 shrink-0" style="transition-delay: 0.15s;">
+            <div class="flex items-center gap-2">
+              <!-- CoachUp logo text badge -->
+              <span class="text-xs font-bold px-2 py-0.5 rounded" style="background-color: color-mix(in srgb, var(--blue-primary) 15%, transparent);
+                       color: var(--blue-primary);">
+                CoachUp
+              </span>
+              <span class="text-yellow-400 text-lg tracking-widest">★★★★★</span>
+              <span class="text-sm font-bold" style="color: var(--page-text);">5.0</span>
+            </div>
+            <p class="text-xs" style="color: var(--page-text-muted);">
+              Based on <strong style="color: var(--page-text);">150+ verified reviews</strong>
+            </p>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ── Review Cards Grid ────────────────────
+         2-col on md+, 1-col on mobile.
+         Cards use masonry-like varied content
+         to feel natural, not templated.
+    ─────────────────────────────────────────── -->
+        <div class="elfsight-app-cdda453b-e2d7-4aa4-a1de-ba1c9e904a7d" data-elfsight-app-lazy></div>
+
+
+
+
+
+
+        <!-- ── Bottom bar: attribution + CTA ──────── -->
+        <div class="reveal opacity-0 translate-y-6 transition-all duration-700
+                flex flex-col sm:flex-row items-start sm:items-center
+                justify-between gap-5 pt-4 border-t" style="border-color: var(--page-border);
+                transition-delay: 0.2s;">
+
+
+          <!-- CTA -->
+          <a href="#register" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full
+                font-semibold text-sm text-white shrink-0
+                active:scale-95 transition-all duration-200" style="background-color: var(--blue-primary);"
+            aria-label="Book your first session with Coach Rami"
+            onmouseover="this.style.backgroundColor='var(--blue-hover)'"
+            onmouseout="this.style.backgroundColor='var(--blue-primary)'">
+            Book Your First Session
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- Location -->
+    <section id="locations" class="w-full py-24 px-6 md:px-16 lg:px-24 xl:px-32"
+      style="background-color: var(--page-bg);">
+
+      <div class="max-w-6xl mx-auto flex flex-col gap-12">
+
+        <!-- ── Section Header ──────────────────────── -->
+        <div class="flex flex-col gap-4 max-w-2xl">
+
+          <span class="fade-up text-xs font-bold tracking-[0.18em] uppercase" style="color: var(--blue-primary);">
+            Where We Train
+          </span>
+
+          <h2 class="fade-up delay-1 text-3xl sm:text-4xl font-black leading-tight" style="color: var(--page-text);">
+            Local Fields.<br class="sm:hidden" /> Zero Commute.
+          </h2>
+
+          <!-- SEO intro paragraph — scannable, trimmed -->
+          <p class="fade-up delay-2 text-base leading-relaxed" style="color: var(--page-text-muted);">
+            Coach Rami comes to <strong style="color: var(--page-text);">your neighborhood</strong>.
+            We serve families across
+            <strong style="color: var(--page-text);">Alpharetta, Cumming, Johns Creek, Milton,
+              Roswell, Sandy Springs, Dunwoody, Brookhaven, and Buckhead</strong> —
+            all at local parks and fields, no commute to a facility required.
+          </p>
+        </div>
+
+        <!-- ── Location Cards Grid ─────────────────── -->
+        <!-- PrebuiltUI "Simple Card with Button" pattern adapted -->
+        <div class="fade-up delay-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+          <!-- CARD 1: Alpharetta -->
+          <article class="location-card" aria-label="Soccer training in Alpharetta, GA">
+            <div class="location-icon-wrap" aria-hidden="true">
+              <!-- Location pin SVG -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-base" style="color: var(--page-text);">
+                Alpharetta, GA
+              </h3>
+              <p class="text-[0.7rem] mt-0.5 font-medium" style="color: var(--blue-primary);">
+                Primary Location
+              </p>
+            </div>
+
+            <p class="text-sm leading-relaxed" style="color: var(--page-text-muted);">
+              Private and group youth soccer training at local Alpharetta parks.
+            </p>
+
+            <p class="text-[0.68rem]" style="color: var(--page-text-muted);">
+              ZIP: 30004 · 30005 · 30009 · 30022
+            </p>
+
+            <a href="#register" class="location-card-link"
+              aria-label="Book a soccer training session in Alpharetta, Georgia">
+              Book a Session
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- CARD 2: Cumming -->
+          <article class="location-card" aria-label="Soccer training in Cumming, GA">
+            <div class="location-icon-wrap" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-base" style="color: var(--page-text);">
+                Cumming, GA
+              </h3>
+              <p class="text-[0.7rem] mt-0.5 font-medium" style="color: var(--blue-primary);">
+                Primary Location
+              </p>
+            </div>
+
+            <p class="text-sm leading-relaxed" style="color: var(--page-text-muted);">
+              Soccer coaching sessions at Forsyth County parks and recreation fields.
+            </p>
+
+            <p class="text-[0.68rem]" style="color: var(--page-text-muted);">
+              ZIP: 30028 · 30040 · 30041
+            </p>
+
+            <a href="#register" class="location-card-link"
+              aria-label="Book a soccer training session in Cumming, Georgia">
+              Book a Session
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- CARD 3: Johns Creek -->
+          <article class="location-card" aria-label="Soccer training in Johns Creek, GA">
+            <div class="location-icon-wrap" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-base" style="color: var(--page-text);">
+                Johns Creek, GA
+              </h3>
+              <p class="text-[0.7rem] mt-0.5 font-medium" style="color: var(--blue-primary);">
+                Primary Location
+              </p>
+            </div>
+
+            <p class="text-sm leading-relaxed" style="color: var(--page-text-muted);">
+              Youth soccer training near Johns Creek's top recreational parks.
+            </p>
+
+            <p class="text-[0.68rem]" style="color: var(--page-text-muted);">
+              ZIP: 30022 · 30024 · 30097
+            </p>
+
+            <a href="#register" class="location-card-link"
+              aria-label="Book a soccer training session in Johns Creek, Georgia">
+              Book a Session
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- CARD 4: Milton -->
+          <article class="location-card" aria-label="Soccer training in Milton, GA">
+            <div class="location-icon-wrap" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-base" style="color: var(--page-text);">
+                Milton, GA
+              </h3>
+              <p class="text-[0.7rem] mt-0.5 font-medium" style="color: var(--blue-primary);">
+                Primary Location
+              </p>
+            </div>
+
+            <p class="text-sm leading-relaxed" style="color: var(--page-text-muted);">
+              On-site coaching at Milton parks for players across all skill levels.
+            </p>
+
+            <p class="text-[0.68rem]" style="color: var(--page-text-muted);">
+              ZIP: 30004 · 30075
+            </p>
+
+            <a href="#register" class="location-card-link"
+              aria-label="Book a soccer training session in Milton, Georgia">
+              Book a Session
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- CARD 5: Roswell -->
+          <article class="location-card" aria-label="Soccer training in Roswell, GA">
+            <div class="location-icon-wrap" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+
+            <h3 class="font-bold text-base" style="color: var(--page-text);">
+              Roswell, GA
+            </h3>
+
+            <p class="text-sm leading-relaxed" style="color: var(--page-text-muted);">
+              Flexible training sessions at Roswell parks and open fields.
+            </p>
+
+            <p class="text-[0.68rem]" style="color: var(--page-text-muted);">
+              ZIP: 30075 · 30076
+            </p>
+
+            <a href="#register" class="location-card-link"
+              aria-label="Book a soccer training session in Roswell, Georgia">
+              Book a Session
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- CARD 6: Sandy Springs -->
+          <article class="location-card" aria-label="Soccer training in Sandy Springs, GA">
+            <div class="location-icon-wrap" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+
+            <h3 class="font-bold text-base" style="color: var(--page-text);">
+              Sandy Springs, GA
+            </h3>
+
+            <p class="text-sm leading-relaxed" style="color: var(--page-text-muted);">
+              Youth soccer development sessions in the Sandy Springs area.
+            </p>
+
+            <p class="text-[0.68rem]" style="color: var(--page-text-muted);">
+              ZIP: 30328 · 30338 · 30350
+            </p>
+
+            <a href="#register" class="location-card-link"
+              aria-label="Book a soccer training session in Sandy Springs, Georgia">
+              Book a Session
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- CARD 7: Dunwoody & Brookhaven -->
+          <article class="location-card" aria-label="Soccer training in Dunwoody and Brookhaven, GA">
+            <div class="location-icon-wrap" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+
+            <h3 class="font-bold text-base" style="color: var(--page-text);">
+              Dunwoody &amp; Brookhaven, GA
+            </h3>
+
+            <p class="text-sm leading-relaxed" style="color: var(--page-text-muted);">
+              Training available at select parks — contact us to confirm scheduling.
+            </p>
+
+            <a href="tel:+14701234567" class="location-card-link muted"
+              aria-label="Call to schedule soccer training in Dunwoody or Brookhaven, Georgia">
+              Contact to Schedule
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- CARD 8: Buckhead -->
+          <article class="location-card" aria-label="Soccer training in Buckhead, GA">
+            <div class="location-icon-wrap" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+
+            <h3 class="font-bold text-base" style="color: var(--page-text);">
+              Buckhead, GA
+            </h3>
+
+            <p class="text-sm leading-relaxed" style="color: var(--page-text-muted);">
+              Sessions available by appointment — contact Coach Rami to confirm.
+            </p>
+
+            <a href="tel:+14701234567" class="location-card-link muted"
+              aria-label="Call to schedule soccer training in Buckhead, Georgia">
+              Contact to Schedule
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+        </div>
+
+        <!-- ── Google Maps Embed ────────────────────── -->
+        <div class="fade-up delay-3 flex flex-col gap-3">
+          <p class="text-xs font-semibold tracking-widest uppercase" style="color: var(--page-text-muted);">
+            Training Radius — North Atlanta Metro
+          </p>
+
+          <div class="map-frame" role="region"
+            aria-label="Map showing Topline Soccer training area in North Atlanta, Georgia">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d846902.7563674926!2d-85.4210058143338!3d33.98703939694449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1785331174794!5m2!1sen!2s"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <!-- <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d103700!2d-84.2966!3d34.0754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1"
+              width="100%" height="100%" style="border: 0; display: block; filter: grayscale(30%);" allowfullscreen=""
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Map of Topline Soccer training locations across North Atlanta Georgia including Alpharetta, Cumming, Johns Creek and Milton"
+              aria-label="Interactive map of Topline Soccer training locations in North Atlanta Georgia">
+            </iframe> -->
+          </div>
+        </div>
+
+        <!-- ── Closing CTA line ─────────────────────── -->
+        <div class="fade-up delay-3 flex flex-col sm:flex-row items-start sm:items-center
+                justify-between gap-4 p-6 rounded-2xl border" style="background-color: var(--page-card-bg);
+                border-color: var(--page-border);">
+
+          <div class="flex flex-col gap-1">
+            <p class="font-bold text-sm" style="color: var(--page-text);">
+              Don't see your city?
+            </p>
+            <p class="text-sm" style="color: var(--page-text-muted);">
+              Text us and we'll do our best to accommodate you.
+            </p>
+          </div>
+
+          <a href="tel:+14701234567" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full
+                font-semibold text-sm text-white shrink-0 transition-all active:scale-95"
+            style="background-color: var(--blue-primary);"
+            aria-label="Call or text Coach Rami at (470) 123-4567 to inquire about training in your city"
+            onmouseover="this.style.backgroundColor='var(--blue-hover)'"
+            onmouseleave="this.style.backgroundColor='var(--blue-primary)'">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07
+                   19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67
+                   A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72
+                   12.84 12.84 0 0 0 .7 2.81
+                   2 2 0 0 1-.45 2.11L8.09 9.91
+                   a16 16 0 0 0 6 6l1.27-1.27
+                   a2 2 0 0 1 2.11-.45
+                   12.84 12.84 0 0 0 2.81.7
+                   A2 2 0 0 1 22 16.92z" />
+            </svg>
+            (470) 123-4567
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+
+
+  <!-- FOOTER -->
+  <footer class="flex flex-col items-center py-16 px-6 border-t mt-auto"
+    style="background: var(--page-bg); border-color: var(--page-border);">
+    <p class="text-xl font-bold mb-1" style="color: var(--page-text);">Topline <span
+        style="color: var(--blue-primary);">Soccer</span></p>
+    <p class="text-xs mb-8" style="color: var(--page-text-muted);">North Atlanta's Premier Youth Soccer Training Program
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-5 mb-8 text-sm">
+      <a href="#coach" class="font-medium hover:opacity-100 opacity-70 transition-all"
+        style="color: var(--page-text);">About</a>
+      <a href="#classes" class="font-medium hover:opacity-100 opacity-70 transition-all"
+        style="color: var(--page-text);">Programs</a>
+      <a href="#locations" class="font-medium hover:opacity-100 opacity-70 transition-all"
+        style="color: var(--page-text);">Locations</a>
+      <a href="#faq" class="font-medium hover:opacity-100 opacity-70 transition-all"
+        style="color: var(--page-text);">FAQ</a>
+      <a href="#register" class="font-medium hover:opacity-100 opacity-70 transition-all"
+        style="color: var(--page-text);">Register</a>
+      <a href="#" class="font-medium hover:opacity-100 opacity-70 transition-all"
+        style="color: var(--page-text);">Privacy Policy</a>
+      <a href="#" class="font-medium hover:opacity-100 opacity-70 transition-all"
+        style="color: var(--page-text);">Terms</a>
+    </div>
+
+    <div class="flex items-center gap-5" style="color: var(--blue-primary);">
+      <a aria-label="Visit our Facebook profile" href="#" class="hover:-translate-y-1 transition-transform"><svg
+          width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg></a>
+      <a aria-label="Visit our Instagram profile" href="#" class="hover:-translate-y-1 transition-transform"><svg
+          width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M16 11.37a4 4 0 1 1-7.914 1.173A4 4 0 0 1 16 11.37m1.5-4.87h.01" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg></a>
+      <a aria-label="Visit our Youtube channel" href="#" class="hover:-translate-y-1 transition-transform"><svg
+          width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M9.75 15.02l5.75-3.02-5.75-3.02v6.04z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" fill="currentColor" />
+        </svg></a>
+    </div>
+
+    <p class="text-xs text-center max-w-lg mt-8 leading-relaxed px-4" style="color: var(--page-text-muted);">Serving
+      Alpharetta · Cumming · Johns Creek · Milton · Roswell · Sandy Springs · Dunwoody · Brookhaven · Buckhead · Greater
+      Atlanta, GA</p>
+    <p class="text-xs text-center opacity-40 mt-2" style="color: var(--page-text-muted);">Redesign concept — not
+      affiliated with or endorsed by Topline Soccer.</p>
+    <p class="text-xs text-center mt-4" style="color: var(--page-text-muted);">Copyright © <span id="year"></span> <a
+        href="#" style="font-weight: bolder; color: var(--blue-primary);">Topline Soccer</a>. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    // Off-Canvas Sidebar
+    const sb = document.getElementById('sidebar');
+    const ov = document.getElementById('overlay');
+
+    function openSB() {
+      sb.classList.remove('translate-x-full');
+      ov.classList.remove('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSB() {
+      sb.classList.add('translate-x-full');
+      ov.classList.add('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('sbOpen').addEventListener('click', openSB);
+    document.getElementById('sbClose').addEventListener('click', closeSB);
+    ov.addEventListener('click', closeSB);
+    sb.querySelectorAll('a').forEach(link => link.addEventListener('click', closeSB));
+
+    // Theme Switcher
+    const html = document.documentElement;
+
+    function switchTheme() {
+      const isLight = html.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        html.removeAttribute('data-theme');
+        localStorage.setItem('tls-theme', 'dark');
+      } else {
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('tls-theme', 'light');
+      }
+    }
+
+    document.getElementById('tdsk').addEventListener('click', switchTheme);
+    document.getElementById('tmob').addEventListener('click', switchTheme);
+
+    // Set Copyright Year
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Scroll fade-in (IntersectionObserver)
+    // Targets all .fade-up elements across the whole page
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // fire once only
+        }
+      });
+    }, { threshold: 0.15 });
+
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
