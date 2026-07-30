@@ -160,100 +160,161 @@
   <!-- Main tag for main land-mark of website  -->
   <main>
     <!-- HERO SECTION -->
-    <section id="hero"
-      class="hero-bg min-h-[92vh] flex items-center relative px-6 md:px-16 lg:px-24 xl:px-32 py-20 md:py-0">
-      <div class="max-w-152 flex flex-col gap-6">
-
-        <div
-          class="rainbow relative z-0 bg-white/15 overflow-hidden p-px flex items-center justify-center rounded-full transition duration-300 active:scale-100 mt-28 md:mt-32">
-          <button
-            class="flex items-center justify-center gap-3 pl-4 pr-6 py-3 border border-black rounded-full font-medium  backdrop-blur">
-            <div class="relative flex size-3.5 items-center justify-center">
-              <span
-                class="absolute inline-flex h-full w-full rounded-full bg-(--blue-primary) opacity-75 animate-ping duration-300"></span>
-              <span class="relative inline-flex size-2 rounded-full bg-(--blue-primary)"></span>
-            </div>
-            <span class='text-xs'>⚽ #1 Ranked CoachUp Coach in Georgia</span>
-          </button>
+    <!-- SECTION 6 — VIDEO / HOOK -->
+    <section id="video" class="py-20 px-6 md:px-16 lg:px-24 xl:px-32" style="background: var(--page-bg);">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Label -->
+        <div class="text-center mb-4">
+          <span class="text-xs font-bold tracking-widest uppercase" style="color: var(--blue-primary);">See It in
+            Action</span>
         </div>
 
-        <!-- <div class="inline-flex items-center gap-2 w-fit px-4 py-1.5 rounded-full border text-[0.7rem] font-bold tracking-widest uppercase" style="background: rgba(0,86,148,0.18); color: #60A5FA; border-color: rgba(0,86,148,0.35);">
-        ⚽ #1 Ranked CoachUp Coach in Georgia
-      </div> -->
+        <!-- H2 -->
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-4" style="color: var(--page-text);">
+          Real Training. <span style="color: var(--blue-primary);">Real Results.</span>
+        </h2>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight" style="color: var(--page-text);">
-          Train Smarter.<br /><span style="color: var(--blue-primary)">Play Better.</span><br />Win More.
-        </h1>
-
-        <p class="text-base leading-relaxed max-w-120" style="color: var(--page-text-muted);">
-          Private and group youth soccer coaching for ages 4–18 across Alpharetta, Cumming, Johns Creek & Milton — 7
-          days
-          a week, no contracts, real results.
+        <!-- Text Above Video -->
+        <p class="text-center max-w-2xl mx-auto mb-12 text-base leading-relaxed" style="color: var(--page-text-muted);">
+          Watch how a Topline Soccer session works — and why players and parents across Atlanta keep coming back week
+          after week.
         </p>
 
-        <div class="flex flex-wrap gap-4 pt-2">
+        <!-- Hero-style Container -->
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl mx-auto max-w-5xl min-h-125"
+          style="background: var(--page-card-bg); border: 1px solid var(--page-border);">
+
+          <!-- Background Media (Image or Video) -->
+          <div class="absolute inset-0 w-full h-full">
+            <!-- Background Image (default visible) -->
+            <div id="slide-image" class="absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out"
+              style="z-index: 1;">
+              <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1400&auto=format&fit=crop&q=80"
+                alt="Youth soccer training session in action" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-black/40"></div>
+            </div>
+
+            <!-- Background Video (hidden by default) -->
+            <div id="slide-video"
+              class="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-700 ease-in-out"
+              style="z-index: 1;">
+              <video class="w-full h-full object-cover" autoplay muted loop playsinline preload="auto"
+                disablePictureInPicture controlsList="nodownload noremoteplayback">
+                <source src="https://www.pexels.com/download/video/6077690/" type="video/mp4">
+                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1400&auto=format&fit=crop&q=80"
+                  alt="Soccer training" class="w-full h-full object-cover" />
+              </video>
+              <div class="absolute inset-0 bg-black/30"></div>
+            </div>
+          </div>
+
+          <!-- ALL CONTENT OVERLAY (Always visible) -->
+          <div class="relative z-10 flex flex-col justify-center min-h-125 p-8 md:p-12 lg:p-16">
+
+            <!-- Badge (same as hero) -->
+            <div
+              class="rainbow relative z-0 bg-white/15 overflow-hidden p-px flex items-center justify-center rounded-full transition duration-300 active:scale-100 w-fit mb-6">
+              <div
+                class="flex items-center justify-center gap-3 pl-4 pr-6 py-3 border border-black rounded-full font-medium backdrop-blur">
+                <div class="relative flex size-3.5 items-center justify-center">
+                  <span
+                    class="absolute inline-flex h-full w-full rounded-full bg-(--blue-primary) opacity-75 animate-ping duration-300"></span>
+                  <span class="relative inline-flex size-2 rounded-full bg-(--blue-primary)"></span>
+                </div>
+                <span class='text-xs text-white'>⚽ #1 Ranked CoachUp Coach in Georgia</span>
+              </div>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-white">
+              Train Smarter.<br />
+              <span style="color: var(--blue-primary);">Play Better.</span><br />
+              Win More.
+            </h3>
+
+            <!-- Description -->
+            <p class="text-base leading-relaxed max-w-xl text-white/80 mt-4">
+              Private and group youth soccer coaching for ages 4–18 across Alpharetta, Cumming, Johns Creek & Milton — 7
+              days a week, no contracts, real results.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap gap-4 pt-6">
+              <a href="#register"
+                class="inline-flex items-center justify-center px-7 py-2.5 rounded-full text-white font-semibold text-sm transition-all active:scale-95"
+                style="background: var(--blue-primary);">Book Your First Session →</a>
+              <a href="#classes"
+                class="inline-flex items-center justify-center px-7 py-2.5 rounded-full font-semibold text-sm border backdrop-blur-md transition-all active:scale-95 text-white"
+                style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2);">See Programs</a>
+            </div>
+
+            <!-- Bottom Stats (like hero) -->
+            <div class="flex flex-wrap items-center gap-4 mt-6 pt-6 border-t"
+              style="border-color: rgba(255,255,255,0.15);">
+              <div class="flex -space-x-2">
+                <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
+                  alt="Reviewer" />
+                <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face"
+                  alt="Reviewer" />
+                <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
+                  src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=80&h=80&fit=crop&crop=face"
+                  alt="Reviewer" />
+                <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
+                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=80&h=80&fit=crop&crop=face"
+                  alt="Reviewer" />
+                <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face"
+                  alt="Reviewer" />
+              </div>
+              <div class="flex flex-col">
+                <span class="text-yellow-400 tracking-widest text-sm">★★★★★</span>
+                <p class="text-xs text-white/70"><strong class="text-white">500+ families</strong> trained across North
+                  Atlanta</p>
+              </div>
+              <div class="hidden sm:block w-px h-10" style="background: rgba(255,255,255,0.15);"></div>
+              <div class="flex flex-col text-xs">
+                <p class="font-bold text-white">Rated 5.0 on CoachUp</p>
+                <p class="text-white/70">#1 Soccer Coach in Georgia</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Toggle Button -->
+          <button id="slider-toggle"
+            class="absolute bottom-6 right-6 z-20 flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 active:scale-95 backdrop-blur-lg"
+            style="background: rgba(13, 13, 13, 0.75); border: 1px solid rgba(255,255,255,0.15); color: white;"
+            onclick="toggleSlider()">
+            <span id="toggle-icon">▶</span>
+            <span id="toggle-text">Watch Video</span>
+          </button>
+
+          <!-- Slider Indicator Dots -->
+          <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+            <div id="dot-image" class="w-2.5 h-2.5 rounded-full transition-all" style="background: white; opacity: 1;">
+            </div>
+            <div id="dot-video" class="w-2.5 h-2.5 rounded-full transition-all"
+              style="background: white; opacity: 0.4;"></div>
+          </div>
+        </div>
+
+        <!-- Text Below Video -->
+        <div class="text-center mt-8 max-w-2xl mx-auto">
+          <p class="text-sm" style="color: var(--page-text-muted);">
+            <span class="inline-block mr-2">📹</span>
+            Every session is filmed for progress tracking. Players can review their own footage and see exactly how
+            they're improving over time.
+          </p>
+        </div>
+
+        <!-- CTA Below Video -->
+        <div class="text-center mt-8">
           <a href="#register"
-            class="inline-flex items-center justify-center px-7 py-2.5 rounded-full text-white font-semibold text-sm transition-all active:scale-95"
-            style="background: var(--blue-primary);">Book Your First Session →</a>
-          <a href="#classes"
-            class="inline-flex items-center justify-center px-7 py-2.5 rounded-full font-semibold text-sm border backdrop-blur-md transition-all active:scale-95"
-            style="background: var(--page-glass-bg); border-color: var(--page-glass-border); color: var(--page-text);">See
-            Programs</a>
-        </div>
-
-        <div class="flex flex-wrap items-center gap-4 mt-4 pt-6 border-t" style="border-color: var(--page-border);">
-          <div class="flex -space-x-2">
-            <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
-              alt="Reviewer" />
-            <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face"
-              alt="Reviewer" />
-            <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
-              src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=80&h=80&fit=crop&crop=face"
-              alt="Reviewer" />
-            <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
-              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=80&h=80&fit=crop&crop=face"
-              alt="Reviewer" />
-            <img class="w-9 h-9 rounded-full border-2 object-cover" style="border-color: var(--page-bg);"
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face"
-              alt="Reviewer" />
-          </div>
-          <div class="flex flex-col">
-            <span class="text-yellow-400 tracking-widest text-sm">★★★★★</span>
-            <p class="text-xs" style="color: var(--page-text-muted);"><strong style="color: var(--page-text);">500+
-                families</strong> trained across North Atlanta</p>
-          </div>
-          <div class="hidden sm:block w-px h-10" style="background: var(--page-border);"></div>
-          <div class="flex flex-col text-xs">
-            <p class="font-bold" style="color: var(--page-text);">Rated 5.0 on CoachUp</p>
-            <p style="color: var(--page-text-muted);">#1 Soccer Coach in Georgia</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Desktop Floating Stats -->
-      <div
-        class="hidden lg:flex flex-col absolute right-16 top-1/2 -translate-y-1/2 gap-5 min-w-40 p-7 rounded-2xl border backdrop-blur-xl"
-        style="background: var(--page-glass-bg); border-color: var(--page-glass-border);">
-        <div>
-          <p class="text-3xl font-black leading-none" style="color: var(--blue-primary);">500+</p>
-          <p class="text-[0.7rem] mt-1" style="color: var(--page-text-muted);">Players Trained</p>
-        </div>
-        <div class="border-t" style="border-color: var(--page-border);"></div>
-        <div>
-          <p class="text-3xl font-black leading-none" style="color: var(--page-text);">10+</p>
-          <p class="text-[0.7rem] mt-1" style="color: var(--page-text-muted);">Years Coaching</p>
-        </div>
-        <div class="border-t" style="border-color: var(--page-border);"></div>
-        <div>
-          <p class="text-3xl font-black leading-none" style="color: var(--page-text);">7</p>
-          <p class="text-[0.7rem] mt-1" style="color: var(--page-text-muted);">Days a Week</p>
-        </div>
-        <div class="border-t" style="border-color: var(--page-border);"></div>
-        <div>
-          <p class="text-3xl font-black leading-none" style="color: var(--page-text);">4</p>
-          <p class="text-[0.7rem] mt-1" style="color: var(--page-text-muted);">Cities Covered</p>
+            class="inline-flex items-center justify-center px-8 py-3.5 rounded-full text-white font-semibold text-sm transition-all hover:scale-105 active:scale-95"
+            style="background: var(--blue-primary);">
+            Ready to See This for Your Child? → Book a Session
+          </a>
         </div>
       </div>
     </section>
@@ -1405,16 +1466,12 @@
           <div class="map-frame" role="region"
             aria-label="Map showing Topline Soccer training area in North Atlanta, Georgia">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d846902.7563674926!2d-85.4210058143338!3d33.98703939694449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1785331174794!5m2!1sen!2s"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"></iframe>
-            <!-- <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d103700!2d-84.2966!3d34.0754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1"
               width="100%" height="100%" style="border: 0; display: block; filter: grayscale(30%);" allowfullscreen=""
               loading="lazy" referrerpolicy="no-referrer-when-downgrade"
               title="Map of Topline Soccer training locations across North Atlanta Georgia including Alpharetta, Cumming, Johns Creek and Milton"
               aria-label="Interactive map of Topline Soccer training locations in North Atlanta Georgia">
-            </iframe> -->
+            </iframe>
           </div>
         </div>
 
@@ -1575,6 +1632,59 @@
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+
+    let isVideoVisible = false;
+    const slideImage = document.getElementById('slide-image');
+    const slideVideo = document.getElementById('slide-video');
+    const dotImage = document.getElementById('dot-image');
+    const dotVideo = document.getElementById('dot-video');
+    const toggleIcon = document.getElementById('toggle-icon');
+    const toggleText = document.getElementById('toggle-text');
+    const videoElement = slideVideo.querySelector('video');
+
+    function toggleSlider() {
+      isVideoVisible = !isVideoVisible;
+
+      if (isVideoVisible) {
+        // Show video, hide image
+        slideImage.style.opacity = '0';
+        slideVideo.style.opacity = '1';
+        dotImage.style.opacity = '0.4';
+        dotVideo.style.opacity = '1';
+        toggleIcon.textContent = '✕';
+        toggleText.textContent = 'Hide Video';
+        // Ensure video plays
+        if (videoElement) {
+          videoElement.play().catch(e => console.log('Video autoplay prevented'));
+        }
+      } else {
+        // Show image, hide video
+        slideImage.style.opacity = '1';
+        slideVideo.style.opacity = '0';
+        dotImage.style.opacity = '1';
+        dotVideo.style.opacity = '0.4';
+        toggleIcon.textContent = '▶';
+        toggleText.textContent = 'Watch Video';
+        // Pause video when hidden
+        if (videoElement) {
+          videoElement.pause();
+        }
+      }
+    }
+
+    // Handle video load errors - fallback to image
+    if (videoElement) {
+      videoElement.addEventListener('error', function () {
+        slideVideo.style.opacity = '0';
+        slideImage.style.opacity = '1';
+        dotImage.style.opacity = '1';
+        dotVideo.style.opacity = '0.4';
+        toggleIcon.textContent = '▶';
+        toggleText.textContent = 'Watch Video';
+        console.log('Video failed to load, showing image instead');
+      });
+    }
   </script>
 </body>
 
