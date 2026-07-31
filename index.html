@@ -22,6 +22,7 @@
   <!-- Use for Tailwind CLI -->
   <link rel="stylesheet" href="src/output.css" />
   <script src="https://elfsightcdn.com/platform.js" async></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </head>
 
@@ -160,7 +161,6 @@
   <!-- Main tag for main land-mark of website  -->
   <main>
     <!-- HERO SECTION -->
-    <!-- SECTION 6 — VIDEO / HOOK -->
     <section id="video" class="py-20 px-6 md:px-16 lg:px-24 xl:px-32" style="background: var(--page-bg);">
       <div class="max-w-7xl mx-auto">
         <!-- Section Label -->
@@ -1513,6 +1513,84 @@
 
       </div>
     </section>
+
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-20 px-6 md:px-16 lg:px-24 xl:px-32" style="background: var(--page-bg);">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Label -->
+        <div class="text-center mb-4">
+          <span class="text-xs font-bold tracking-widest uppercase" style="color: var(--blue-primary);">Get Started
+            Today</span>
+        </div>
+
+        <!-- H2 -->
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-4" style="color: var(--page-text);">
+          Book Your First Session — <span style="color: var(--blue-primary);">It's Free to Register</span>
+        </h2>
+
+        <!-- Intro Paragraph -->
+        <p class="text-center max-w-2xl mx-auto mb-12 text-base leading-relaxed" style="color: var(--page-text-muted);">
+          Fill out the short form below and Coach Rami will personally reach out within 24 hours to get your child
+          scheduled.
+          No commitment required. No payment due at registration.
+        </p>
+
+        <!-- Contact Form -->
+        <div class="max-w-4xl mx-auto">
+          <form onsubmit="sendMail(event)" class="rounded-2xl p-8 md:p-12"
+            style="background: var(--page-card-bg); border: 1px solid var(--page-border);">
+
+            <!-- Form Status Message -->
+            <p id="formStatus" class="text-center mb-6 text-sm" style="color: var(--page-text-muted);"></p>
+
+            <!-- Form Fields -->
+            <div class="lg:flex lg:flex-row lg:gap-12 lg:justify-between lg:items-start">
+
+              <!-- Left Column -->
+              <div class="flex flex-col gap-4 flex-1 w-full">
+                <input type="text" name="user_name" id="personName" placeholder="Your name"
+                  class="w-full p-3.5 outline-none rounded-xl transition-all duration-200 text-sm"
+                  style="background: var(--page-input-bg); color: var(--page-text); border: 1px solid var(--page-border);"
+                  required>
+
+                <input type="email" name="user_email" id="personEmail" placeholder="Your email"
+                  class="w-full p-3.5 outline-none rounded-xl transition-all duration-200 text-sm"
+                  style="background: var(--page-input-bg); color: var(--page-text); border: 1px solid var(--page-border);"
+                  required>
+
+                <input type="text" name="subject" id="personSubject" placeholder="Subject"
+                  class="w-full p-3.5 outline-none rounded-xl transition-all duration-200 text-sm"
+                  style="background: var(--page-input-bg); color: var(--page-text); border: 1px solid var(--page-border);"
+                  required>
+              </div>
+
+              <!-- Right Column (Textarea) -->
+              <div class="flex-1 w-full mt-4 lg:mt-0">
+                <!-- <textarea name="user_message" id="personMessage" placeholder="Your message"
+                  class="w-full p-3.5 outline-none rounded-xl transition-all duration-200 text-sm resize-none"
+                  style="background: var(--page-input-bg); color: var(--page-text); border: 1px solid var(--page-border); min-height: 140px; height: 140px;"
+                  required>
+                </textarea> -->
+                <textarea name="user_message" id="personMessage" placeholder="Your message"
+                  class="w-full p-3.5 outline-none rounded-xl transition-all duration-200 text-sm resize-none"
+                  style="background: var(--page-input-bg); color: var(--page-text); border: 1px solid var(--page-border); min-height: 140px; height: 140px;"
+                  required></textarea>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-center w-full mt-8">
+              <button type="submit"
+                class="inline-flex items-center justify-center px-10 py-3.5 rounded-full text-white font-semibold text-sm transition-all hover:scale-105 active:scale-95"
+                style="background: var(--blue-primary);">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
 
@@ -1575,117 +1653,7 @@
   </footer>
 
 
-  <script>
-    // Off-Canvas Sidebar
-    const sb = document.getElementById('sidebar');
-    const ov = document.getElementById('overlay');
-
-    function openSB() {
-      sb.classList.remove('translate-x-full');
-      ov.classList.remove('opacity-0', 'pointer-events-none');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeSB() {
-      sb.classList.add('translate-x-full');
-      ov.classList.add('opacity-0', 'pointer-events-none');
-      document.body.style.overflow = '';
-    }
-
-    document.getElementById('sbOpen').addEventListener('click', openSB);
-    document.getElementById('sbClose').addEventListener('click', closeSB);
-    ov.addEventListener('click', closeSB);
-    sb.querySelectorAll('a').forEach(link => link.addEventListener('click', closeSB));
-
-    // Theme Switcher
-    const html = document.documentElement;
-
-    function switchTheme() {
-      const isLight = html.getAttribute('data-theme') === 'light';
-      if (isLight) {
-        html.removeAttribute('data-theme');
-        localStorage.setItem('tls-theme', 'dark');
-      } else {
-        html.setAttribute('data-theme', 'light');
-        localStorage.setItem('tls-theme', 'light');
-      }
-    }
-
-    document.getElementById('tdsk').addEventListener('click', switchTheme);
-    document.getElementById('tmob').addEventListener('click', switchTheme);
-
-    // Set Copyright Year
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    // Scroll fade-in (IntersectionObserver)
-    // Targets all .fade-up elements across the whole page
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // fire once only
-        }
-      });
-    }, { threshold: 0.15 });
-
-
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-
-    let isVideoVisible = false;
-    const slideImage = document.getElementById('slide-image');
-    const slideVideo = document.getElementById('slide-video');
-    const dotImage = document.getElementById('dot-image');
-    const dotVideo = document.getElementById('dot-video');
-    const toggleIcon = document.getElementById('toggle-icon');
-    const toggleText = document.getElementById('toggle-text');
-    const videoElement = slideVideo.querySelector('video');
-
-    function toggleSlider() {
-      isVideoVisible = !isVideoVisible;
-
-      if (isVideoVisible) {
-        // Show video, hide image
-        slideImage.style.opacity = '0';
-        slideVideo.style.opacity = '1';
-        dotImage.style.opacity = '0.4';
-        dotVideo.style.opacity = '1';
-        toggleIcon.textContent = '✕';
-        toggleText.textContent = 'Hide Video';
-        // Ensure video plays
-        if (videoElement) {
-          videoElement.play().catch(e => console.log('Video autoplay prevented'));
-        }
-      } else {
-        // Show image, hide video
-        slideImage.style.opacity = '1';
-        slideVideo.style.opacity = '0';
-        dotImage.style.opacity = '1';
-        dotVideo.style.opacity = '0.4';
-        toggleIcon.textContent = '▶';
-        toggleText.textContent = 'Watch Video';
-        // Pause video when hidden
-        if (videoElement) {
-          videoElement.pause();
-        }
-      }
-    }
-
-    // Handle video load errors - fallback to image
-    if (videoElement) {
-      videoElement.addEventListener('error', function () {
-        slideVideo.style.opacity = '0';
-        slideImage.style.opacity = '1';
-        dotImage.style.opacity = '1';
-        dotVideo.style.opacity = '0.4';
-        toggleIcon.textContent = '▶';
-        toggleText.textContent = 'Watch Video';
-        console.log('Video failed to load, showing image instead');
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
