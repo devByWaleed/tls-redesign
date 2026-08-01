@@ -109,6 +109,104 @@ if (videoElement) {
 }
 
 
+const faqs = [
+    {
+        question: "What age groups do you train?",
+        answer: "We work with players aged 4 to 18. Training is adapted to each age group — playful for young kids, technically intensive for older players."
+    },
+    {
+        question: "Do you offer sessions 7 days a week?",
+        answer: "Yes! We offer sessions every day including weekends, based on availability at your preferred field location."
+    },
+    {
+        question: "Where exactly do sessions take place?",
+        answer: "Sessions are held at local parks and recreational fields in your city — no travel to a training facility required."
+    },
+    {
+        question: "Is there a contract or minimum commitment?",
+        answer: "No contracts and no minimum sessions. Book individually or in packages — whatever works for you."
+    },
+    {
+        question: "How do I register?",
+        answer: "Fill out the registration form on this page. Coach John Doe will follow up within 24 hours to confirm your program and first session."
+    }
+];
+
+
+let open = null;
+
+document.getElementById('faqs').innerHTML = faqs.map((faq, i) => `
+        <div class="bg-slate-50 p-3.5 rounded-lg cursor-pointer transition-all duration-300 border border-slate-200 hover:bg-slate-100 faq-item" data-index="${i}">
+            <div class="flex items-center justify-between">
+                <span class="text-sm font-medium text-neutral-800">${faq.question}</span>
+                <div class="text-slate-400 p-1 rounded transition-colors icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </div>
+            </div>
+            <div class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 answer">
+                <div class="overflow-hidden">
+                    <p class="text-sm text-neutral-600 leading-relaxed mt-4">${faq.answer}</p>
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+document.querySelectorAll('.faq-item').forEach(item => {
+    item.onclick = () => {
+        const i = item.dataset.index;
+        const answer = item.querySelector('.answer');
+        const icon = item.querySelector('.icon');
+
+        if (open === i) {
+            answer.classList.remove('grid-rows-[1fr]', 'opacity-100');
+            answer.classList.add('grid-rows-[0fr]', 'opacity-0');
+            icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>';
+            icon.classList.remove('bg-slate-200', 'text-slate-500');
+            item.classList.remove('row-span-2');
+            open = null;
+        } else {
+            if (open !== null) {
+                const prev = document.querySelector(`[data-index="${open}"]`);
+                prev.querySelector('.answer').classList.remove('grid-rows-[1fr]', 'opacity-100');
+                prev.querySelector('.answer').classList.add('grid-rows-[0fr]', 'opacity-0');
+                prev.querySelector('.icon').innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>';
+                prev.querySelector('.icon').classList.remove('bg-slate-200', 'text-slate-500');
+                prev.classList.remove('row-span-2');
+            }
+            answer.classList.add('grid-rows-[1fr]', 'opacity-100');
+            answer.classList.remove('grid-rows-[0fr]', 'opacity-0');
+            icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>';
+            icon.classList.add('bg-slate-200', 'text-slate-500');
+            item.classList.add('row-span-2');
+            open = i;
+        }
+    };
+});
+
+
+// ============================================
+// SCROLL TO TOP BUTTON (bottom-right corner)
+// ============================================
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+// Show/hide button based on scroll position
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('visible');
+    } else {
+        scrollToTopBtn.classList.remove('visible');
+    }
+});
+
+// Scroll to top when clicked
+scrollToTopBtn.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
 
 // Function to send Email
 function sendMail(event) {
@@ -131,9 +229,9 @@ function sendMail(event) {
     };
 
     // EMAILJS CREDENTIALS
-    const SERVICE_ID = 'YOUR_SERVICE_ID';
-    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+    const SERVICE_ID = 'service_1ludv8h';
+    const TEMPLATE_ID = 'template_1to4cqc';
+    const PUBLIC_KEY = 'Fpp5G3rKzrZGmLRJy';
 
     // Initialize EmailJS with your public key
     emailjs.init(PUBLIC_KEY);
@@ -141,7 +239,7 @@ function sendMail(event) {
     // Send email
     emailjs.send(SERVICE_ID, TEMPLATE_ID, params)
         .then(function (response) {
-            status.textContent = "✅ Message sent successfully! Coach Rami will respond within 24 hours.";
+            status.textContent = "✅ Message sent successfully! Coach will respond within 24 hours.";
             status.style.color = "#2D6A4F";
             console.log('SUCCESS!', response.status, response.text);
             form.reset();
