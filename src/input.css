@@ -11,8 +11,10 @@
     --page-nav-bg: #0D0D0D;
     --page-glass-bg: rgba(20, 20, 20, 0.60);
     --page-glass-border: rgba(255, 255, 255, 0.12);
-    --blue-primary: #005694;
-    --blue-hover: #1341B0;
+
+    --blue-primary: #0073C8;
+    --blue-hover: #005AA0;
+    --blue-accent: #1085d8;
 }
 
 /* ── Light Theme Override ──────────────────────── */

@@ -7,7 +7,7 @@
   <meta name="description"
     content="Georgia's #1 rated youth soccer coach in Alpharetta, Cumming, Johns Creek & Milton. Book today — 7 days a week." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.ico" />
-  <title>Topline Soccer | #1 Youth Soccer Coach in Alpharetta, Cumming & Johns Creek GA</title>
+  <title>Apex Soccer | #1 Youth Soccer Coach in Alpharetta, Cumming & Johns Creek GA</title>
 
   <script>
     (function () {
@@ -27,6 +27,12 @@
 </head>
 
 <body class="min-h-screen flex flex-col font-sans">
+
+  <a href="#main-content"
+    class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-9999 focus:px-6 focus:py-3 focus:rounded-xl focus:font-semibold focus:text-sm focus:shadow-xl"
+    style="background: var(--blue-primary); color: white;" aria-label="Skip to main content">
+    Skip to main content
+  </a>
 
   <!-- OVERLAY (Mobile Sidebar Backdrop) -->
   <div id="overlay"
@@ -51,14 +57,22 @@
       </button>
     </div>
     <nav class="flex flex-col">
+      <a href="#hero" class="py-3 text.base font-medium border-b transition-all hover:pl-1"
+        style="color: var(--page-text); border-color: var(--page-border);" tabindex="0">Home</a>
       <a href="#coach" class="py-3 text.base font-medium border-b transition-all hover:pl-1"
         style="color: var(--page-text); border-color: var(--page-border);">About</a>
       <a href="#classes" class="py-3 text.base font-medium border-b transition-all hover:pl-1"
         style="color: var(--page-text); border-color: var(--page-border);">Programs</a>
+      <a href="#how-it-works" class="py-3 text.base font-medium border-b transition-all hover:pl-1"
+        style="color: var(--page-text); border-color: var(--page-border);">How It Works</a>
+      <a href="#testimonials" class="py-3 text.base font-medium border-b transition-all hover:pl-1"
+        style="color: var(--page-text); border-color: var(--page-border);">Reviews</a>
       <a href="#locations" class="py-3 text.base font-medium border-b transition-all hover:pl-1"
         style="color: var(--page-text); border-color: var(--page-border);">Locations</a>
       <a href="#faq" class="py-3 text.base font-medium border-b transition-all hover:pl-1"
-        style="color: var(--page-text); border-color: var(--page-border);">FAQ</a>
+        style="color: var(--page-text); border-color: var(--page-border);" tabindex="0">FAQs</a>
+      <a href="#contact" class="py-3 text.base font-medium border-b transition-all hover:pl-1"
+        style="color: var(--page-text); border-color: var(--page-border);">Contact</a>
     </nav>
     <div class="mt-auto pt-8 flex flex-col gap-4">
       <a href="tel:+14701234567" class="text-sm" style="color: var(--page-text-muted);">📞 (470) 123-4567</a>
@@ -81,7 +95,7 @@
     <!-- Main Navigation Bar -->
     <nav class="h-17.5 flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 transition-colors border-b"
       style="background: var(--page-nav-bg); border-color: var(--page-border);">
-      <a href="#hero" class="text-xl font-bold tracking-wide" style="color: var(--page-text);">Topline <span
+      <a href="#hero" class="text-xl font-bold tracking-wide" style="color: var(--page-text);">Apex <span
           style="color: var(--blue-primary)">Soccer</span></a>
 
       <!-- Desktop Links -->
@@ -92,8 +106,32 @@
             style="color: var(--page-text);">Programs</a></li>
         <li><a href="#locations" class="transition-colors hover:opacity-100 opacity-70"
             style="color: var(--page-text);">Locations</a></li>
-        <li><a href="#faq" class="transition-colors hover:opacity-100 opacity-70"
-            style="color: var(--page-text);">FAQ</a></li>
+        <li><a href="#contact" class="transition-colors hover:opacity-100 opacity-70"
+            style="color: var(--page-text);">Contact</a></li>
+        <li class="relative group">
+          <button class="flex items-center gap-1 transition-colors hover:opacity-100 opacity-70 cursor-pointer"
+            style="color: var(--page-text);">
+            More Links
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+          <div
+            class="absolute top-full left-0 mt-2 w-48 rounded-xl border shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 backdrop-blur-xl"
+            style="background: var(--page-glass-bg); border-color: var(--page-border);">
+            <div class="flex flex-col p-2">
+              <a href="#hero" class="px-4 py-2.5 text-sm rounded-lg transition-all hover:pl-5"
+                style="color: var(--page-text); border-color: var(--page-border);">Home</a>
+              <a href="#how-it-works" class="px-4 py-2.5 text-sm rounded-lg transition-all hover:pl-5"
+                style="color: var(--page-text); border-color: var(--page-border);">How It Works</a>
+              <a href="#testimonials" class="px-4 py-2.5 text-sm rounded-lg transition-all hover:pl-5"
+                style="color: var(--page-text); border-color: var(--page-border);">Reviews</a>
+              <a href="#faq" class="px-4 py-2.5 text-sm rounded-lg transition-all hover:pl-5"
+                style="color: var(--page-text); border-color: var(--page-border);">FAQs</a>
+            </div>
+          </div>
+        </li>
       </ul>
 
       <!-- Desktop Right CTA & Controls -->
@@ -176,7 +214,7 @@
 
         <!-- Text Above Video -->
         <p class="text-center max-w-2xl mx-auto mb-12 text-base leading-relaxed" style="color: var(--page-text-muted);">
-          Watch how a Topline Soccer session works — and why players and parents across Atlanta keep coming back week
+          Watch how a Apex Soccer session works — and why players and parents across Atlanta keep coming back week
           after week.
         </p>
 
@@ -471,7 +509,8 @@
             </div>
 
             <!-- Coach photo -->
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80"
+            <img
+              src="https://images.unsplash.com/photo-1585757318177-0570a997dc3a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Youth soccer coach training a player in Alpharetta Georgia"
               class="relative z-10 w-full rounded-2xl object-cover" style="aspect-ratio: 4/5; max-height: 520px;"
               loading="lazy" />
@@ -519,7 +558,7 @@
           </h2>
 
           <p class="fade-up delay-2 text-base leading-relaxed" style="color: var(--page-text-muted);">
-            Topline Soccer offers a full range of youth soccer training programs
+            Apex Soccer offers a full range of youth soccer training programs
             in Alpharetta, GA and surrounding cities. From beginner fundamentals
             to advanced competitive prep, every program is designed by a certified
             Georgia soccer coach to deliver measurable improvement in technique,
@@ -1121,7 +1160,7 @@
                transition-delay: 0.05s;" aria-label="Review from Spandan, CoachUp client">
 
             <!-- Stars -->
-            <div class="flex items-center gap-1" aria-label="5 out of 5 stars">
+            <div class="flex items-center gap-1" aria-label="5 out of 5 stars" role="img">
               <span class="text-yellow-400 text-sm tracking-widest" aria-hidden="true">★★★★★</span>
             </div>
 
@@ -1150,7 +1189,7 @@
                border-color: var(--page-border);
                transition-delay: 0.1s;" aria-label="Review from Carina, CoachUp client">
 
-            <div class="flex items-center gap-1" aria-label="5 out of 5 stars">
+            <div class="flex items-center gap-1" aria-label="5 out of 5 stars" role="img">
               <span class="text-yellow-400 text-sm tracking-widest" aria-hidden="true">★★★★★</span>
             </div>
 
@@ -1178,7 +1217,7 @@
                border-color: var(--page-border);
                transition-delay: 0.15s;" aria-label="Review from Natasha, CoachUp client">
 
-            <div class="flex items-center gap-1" aria-label="5 out of 5 stars">
+            <div class="flex items-center gap-1" aria-label="5 out of 5 stars" role="img">
               <span class="text-yellow-400 text-sm tracking-widest" aria-hidden="true">★★★★★</span>
             </div>
 
@@ -1206,7 +1245,7 @@
                border-color: var(--page-border);
                transition-delay: 0.2s;" aria-label="Review from Paul, CoachUp client">
 
-            <div class="flex items-center gap-1" aria-label="5 out of 5 stars">
+            <div class="flex items-center gap-1" aria-label="5 out of 5 stars" role="img">
               <span class="text-yellow-400 text-sm tracking-widest" aria-hidden="true">★★★★★</span>
             </div>
 
@@ -1234,7 +1273,7 @@
                border-color: var(--page-border);
                transition-delay: 0.25s;" aria-label="Review from Niki, CoachUp client">
 
-            <div class="flex items-center gap-1" aria-label="5 out of 5 stars">
+            <div class="flex items-center gap-1" aria-label="5 out of 5 stars" role="img">
               <span class="text-yellow-400 text-sm tracking-widest" aria-hidden="true">★★★★★</span>
             </div>
 
@@ -1264,7 +1303,7 @@
 
             <!-- Long-term badge -->
             <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1" aria-label="5 out of 5 stars">
+              <div class="flex items-center gap-1" aria-label="5 out of 5 stars" role="img">
                 <span class="text-yellow-400 text-sm tracking-widest" aria-hidden="true">★★★★★</span>
               </div>
               <span class="text-[0.65rem] font-semibold px-2 py-0.5 rounded-full" style="background-color: color-mix(in srgb, var(--blue-primary) 12%, transparent);
@@ -1635,13 +1674,13 @@
           </p>
 
           <div class="map-frame" role="region"
-            aria-label="Map showing Topline Soccer training area in North Atlanta, Georgia">
+            aria-label="Map showing Apex Soccer training area in North Atlanta, Georgia">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d103700!2d-84.2966!3d34.0754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1"
               width="100%" height="100%" style="border: 0; display: block; filter: grayscale(30%);" allowfullscreen=""
               loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              title="Map of Topline Soccer training locations across North Atlanta Georgia including Alpharetta, Cumming, Johns Creek and Milton"
-              aria-label="Interactive map of Topline Soccer training locations in North Atlanta Georgia">
+              title="Map of Apex Soccer training locations across North Atlanta Georgia including Alpharetta, Cumming, Johns Creek and Milton"
+              aria-label="Interactive map of Apex Soccer training locations in North Atlanta Georgia">
             </iframe>
           </div>
         </div>
@@ -1833,10 +1872,10 @@
     <p class="text-xs text-center max-w-lg mt-8 leading-relaxed px-4" style="color: var(--page-text-muted);">Serving
       Alpharetta · Cumming · Johns Creek · Milton · Roswell · Sandy Springs · Dunwoody · Brookhaven · Buckhead · Greater
       Atlanta, GA</p>
-    <p class="text-xs text-center opacity-40 mt-2" style="color: var(--page-text-muted);">Redesign concept — not
-      affiliated with or endorsed by Topline Soccer.</p>
+    <p class="text-xs text-center mt-5">Redesign concept — not
+      affiliated with or endorsed by Apex Soccer.</p>
     <p class="text-xs text-center mt-4" style="color: var(--page-text-muted);">Copyright © <span id="year"></span> <a
-        href="#" style="font-weight: bolder; color: var(--blue-primary);">Topline Soccer</a>. All rights reserved.</p>
+        href="#" style="font-weight: bolder; color: var(--blue-primary);">Apex Soccer</a>. All rights reserved.</p>
   </footer>
 
   <!-- Scroll to Top Button (bottom-right corner) -->
