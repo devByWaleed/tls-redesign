@@ -1,0 +1,117 @@
+Dark mode audit for Accessibility
+
+Names and labels
+Skip links are not focusable.
+Including a skip link can help users skip to the main content to save time. Learn more about skip links.
+Failing Elements
+a.skip-link.sr-only.focus:not-sr-only.focus:absolute.focus:top-4.focus:left-4.focus:z-9999.focus:px-6.focus:py-3.focus:rounded-xl.focus:font-semibold.focus:text-sm.focus:shadow-xl
+a.py-3.text.base.font-medium.border-b.transition-all.hover:pl-1
+a.py-3.text.base.font-medium.border-b.transition-all.hover:pl-1
+
+-----------------------------------
+
+Background and foreground colors do not have a sufficient contrast ratio.
+Low-contrast text is difficult or impossible for many users to read. Learn how to provide sufficient color contrast.
+Failing Elements
+span.text-xs.font-bold.tracking-widest.uppercase
+section#video.py-20.px-6.md:px-16.lg:px-24.xl:px-32
+span.text-xs.font-bold.tracking-widest.uppercase
+section#contact.py-20.px-6.md:px-16.lg:px-24.xl:px-32
+a
+footer.flex.flex-col.items-center.py-16.px-6.border-t.mt-auto
+
+-----------------------------------
+
+Uses third-party cookies 42 cookies found
+Third-party cookies may be blocked in some contexts. Learn more about preparing for third-party cookie restrictions.
+Name
+URL
+Other Google APIs/SDKs utility 
+COMPASS
+/maps/embed?pb=…(www.google.com)
+COMPASS
+/maps/embed?pb=…(www.google.com)
+COMPASS
+/maps/embed?pb=…(www.google.com)
+COMPASS
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+_sp_id.6393
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+LSOLH
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+__Secure-OSID
+/maps/embed?pb=…(www.google.com)
+COMPASS
+/maps/embed?pb=…(www.google.com)
+COMPASS
+/maps/embed?pb=…(www.google.com)
+COMPASS
+/maps/embed?pb=…(www.google.com)
+COMPASS
+/maps/embed?pb=…(www.google.com)
+__Host-3PLSID
+/maps/embed?pb=…(www.google.com)
+COMPASS
+/maps/embed?pb=…(www.google.com)
+COMPASS
+/maps/embed?pb=…(www.google.com)
+COMPASS
+/maps/embed?pb=…(www.google.com)
+__Secure-3PAPISID
+/maps/embed?pb=…(www.google.com)
+__Secure-3PSID
+/maps/embed?pb=…(www.google.com)
+NID
+/maps/embed?pb=…(www.google.com)
+__Secure-3PSIDTS
+/maps/embed?pb=…(www.google.com)
+__Secure-3PSIDRTS
+/maps/embed?pb=…(www.google.com)
+__Secure-3PSIDCC
+/maps/embed?pb=…(www.google.com)
+
+----------------------------------------
+----------------------------------------
+----------------------------------------
+
+Light theme
+
+Background and foreground colors do not have a sufficient contrast ratio.
+Low-contrast text is difficult or impossible for many users to read. Learn how to provide sufficient color contrast.
+Failing Elements
+span.text-xs.font-bold.tracking-widest.uppercase
+section#video.py-20.px-6.md:px-16.lg:px-24.xl:px-32
+span.text-xs.font-bold.tracking-widest.uppercase
+section#contact.py-20.px-6.md:px-16.lg:px-24.xl:px-32
+a
+footer.flex.flex-col.items-center.py-16.px-6.border-t.mt-auto
