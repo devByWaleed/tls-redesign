@@ -125,3 +125,8 @@ body {
 .delay-5 {
     transition-delay: 0.5s;
 }
+
+select option {
+    background-color: var(--page-card-bg);
+    color: var(--page-text);
+}

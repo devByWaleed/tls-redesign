@@ -2,7 +2,7 @@
   "scripts": {
     "css-dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
     "dev": "vite",
-    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css && vite build",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --minify && vite build",
     "preview": "vite preview"
   },
   "type": "module",

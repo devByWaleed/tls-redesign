@@ -159,6 +159,7 @@ function sendMail(event) {
             console.log('FAILED...', error);
         });
 }
+document.getElementById('contactForm')?.addEventListener('submit', sendMail);
 
 
 // ── Skip Link Focus Handler ────────────────────────────────────

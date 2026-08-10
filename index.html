@@ -7,6 +7,9 @@
   <meta name="description"
     content="Georgia's #1 rated youth soccer coach in Alpharetta, Cumming, Johns Creek & Milton. Book today — 7 days a week." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.ico" />
+  <link rel="preconnect" href="https://www.google.com" />
+  <link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://maps.googleapis.com" crossorigin />
   <!-- Use for Tailwind CLI -->
   <link rel="stylesheet" href="src/output.css" />
   <title>Apex Soccer | #1 Youth Soccer Coach in Alpharetta, Cumming & Johns Creek GA</title>
@@ -17,7 +20,7 @@
       if (s === 'light') document.documentElement.setAttribute('data-theme', 'light');
     })();
   </script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
   <!-- Add this for using Tailwind Play CDN -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
 
@@ -210,8 +213,8 @@
             <!-- Background Image (default visible) -->
             <div id="slide-image"
               class="absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out z-1">
-              <img src="assets/hero.png" alt="Youth soccer training session in action"
-                class="w-full h-full object-cover" loading="eager" fetchpriority="high" />
+              <img src="assets/hero.webp" alt="Youth soccer training session in action"
+                class="w-full h-full object-cover" loading="eager" fetchpriority="high" width="856" height="500" />
               <div class="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-black/40"></div>
             </div>
 
@@ -221,7 +224,7 @@
               <video class="w-full h-full object-cover" muted loop playsinline preload="none" disablePictureInPicture
                 controlsList="nodownload noremoteplayback">
                 <source src="assets/video.mp4" type="video/mp4">
-                <img src="assets/hero.png" alt="Soccer training" class="w-full h-full object-cover" />
+                <img src="assets/hero.webp" alt="Soccer training" class="w-full h-full object-cover" />
               </video>
               <div class="absolute inset-0 bg-black/30"></div>
             </div>
@@ -269,12 +272,12 @@
             <!-- Bottom Stats (like hero) -->
             <div class="flex flex-wrap items-center gap-4 mt-6 pt-6 border-t border-white/15">
               <div class="flex -space-x-2">
-                <img class="w-9 h-9 rounded-full border-2 object-cover border-page-bg" src="assets/reviewer1.jfif"
-                  alt="Reviewer 1" />
-                <img class="w-9 h-9 rounded-full border-2 object-cover border-page-bg" src="assets/reviewer2.jfif"
-                  alt="Reviewer 2" />
-                <img class="w-9 h-9 rounded-full border-2 object-cover border-page-bg" src="assets/reviewer3.jfif"
-                  alt="Reviewer 3" />
+                <img class="w-9 h-9 rounded-full border-2 object-cover border-page-bg" src="assets/reviewer1.webp"
+                  alt="Reviewer 1" width="36" height="36" />
+                <img class="w-9 h-9 rounded-full border-2 object-cover border-page-bg" src="assets/reviewer2.webp"
+                  alt="Reviewer 2" width="36" height="36" />
+                <img class="w-9 h-9 rounded-full border-2 object-cover border-page-bg" src="assets/reviewer3.webp"
+                  alt="Reviewer 3" width="36" height="36" />
               </div>
               <div class="flex flex-col">
                 <span class="text-yellow-400 tracking-widest text-sm">★★★★★</span>
@@ -466,7 +469,7 @@
             </div>
 
             <!-- Coach photo -->
-            <img src="assets/coach.png" alt="Youth soccer coach training a player in Alpharetta Georgia"
+            <img src="assets/coach.webp" alt="Youth soccer coach training a player in Alpharetta Georgia"
               class="relative z-10 w-full rounded-2xl object-cover" style="aspect-ratio: 4/5; max-height: 520px;"
               loading="lazy" />
 
@@ -1642,7 +1645,7 @@
 
         <!-- Contact Form -->
         <div class="max-w-4xl mx-auto">
-          <form onsubmit="sendMail(event)" class="rounded-2xl p-8 md:p-12 bg-page-card border border-page-border">
+          <form id="contactForm" class="rounded-2xl p-8 md:p-12 bg-page-card border border-page-border">
 
             <!-- Form Status Message -->
             <p id="formStatus" class="text-center mb-6 text-sm text-page-text-muted"></p>
@@ -1667,10 +1670,11 @@
 
               <!-- Right Column -->
               <div class="flex flex-col gap-4 flex-1 w-full mt-4 lg:mt-0">
-                <select name="program" id="programSelect"
-                  class="w-full p-3.5 outline-none rounded-xl transition-all duration-200 text-sm bg-page-input text-page-text border border-page-border"
+                <label for="programSelect" class="sr-only">Preferred program</label>
+                <select name="program" id="programSelect" aria-label="Preferred program"
+                  class="w-full p-3.5 outline-none rounded-xl transition-all duration-200 text-sm  text-page-text border border-page-border"
                   required>
-                  <option value="" disabled selected>Preferred program</option>
+                  <option value="" disabled selected>Choose program</option>
                   <option value="1-on-1 Private Training">1-on-1 Private Training</option>
                   <option value="Group Training (2-6 Players)">Group Training (2-6 Players)</option>
                   <option value="Full Player Evaluation">Full Player Evaluation</option>
